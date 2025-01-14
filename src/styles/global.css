@@ -255,16 +255,20 @@ footer {
 }
 
 
-.git-icon {
-    content: url("/github-mark-white.svg");
+.instagram-icon {
+    content: url("https://c9f3mp48mf.ufs.sh/f/0vmfMbAeUoZRE29ZXjk67K4DzrjCIvVTWftGoRZOekL2m5gc");
 }
 
-.mail-icon {
-    content: url("/mail-white.svg");
+.tiktok-icon {
+    content: url("https://c9f3mp48mf.ufs.sh/f/0vmfMbAeUoZRjcJNN6Qs9wKeNUDlXQICmogPxTGHVZMdb4Ot");
 }
 
-.linked-in {
-    content: url("/li-in-white.png");
+.bluesky-icon {
+    content: url("https://c9f3mp48mf.ufs.sh/f/0vmfMbAeUoZRK8NfjOIdXCiB4IFZfe0yjpamYA3Ns9klQLcH");
+}
+
+.kofi-icon {
+    content: url("https://c9f3mp48mf.ufs.sh/f/0vmfMbAeUoZRBoIexzvq9TClwKiBXJPNVocb5WAduUgapzxR");
 }
 
 /* 404 */
