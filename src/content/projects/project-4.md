@@ -1,16 +1,16 @@
 ---
-title: 'Project 4'
-description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci'
+title: 'Gyaru Sylvia'
+description: ''
 image:
-    url: '/GitHub.webp'
+    url: 'https://c9f3mp48mf.ufs.sh/f/0vmfMbAeUoZRmHd62QfyObPtsf6dvQqjZ3o0urJmnF7kG9Ya'
     alt: 'GitHub wallpaper'
 worksImage1:
-    url: '/image-1.webp'
+    url: 'https://c9f3mp48mf.ufs.sh/f/0vmfMbAeUoZRmHd62QfyObPtsf6dvQqjZ3o0urJmnF7kG9Ya'
     alt: 'first image of your project.'
 worksImage2:
     url: '/image-2.webp'
     alt: 'second image of your project.'
-platform: Web
+platform: IbisPaint
 stack: Astro, JavaScript
 website: https://astro-milky-way.netlify.app/
 github: https://github.com/ttomczak3/Milky-Way
