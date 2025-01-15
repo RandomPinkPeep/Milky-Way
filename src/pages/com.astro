@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 const pageTitle = "Milky-Way";
+import { Select } from 'free-astro-components'
+import { Input } from 'free-astro-components'
+import { Button } from 'free-astro-components'
 ---
 
 <Layout>
@@ -17,26 +20,62 @@ const pageTitle = "Milky-Way";
         porttitor at massa. Phasellus a ultrices arcu. Donec viverra, lorem in pellentesque euismod,
         libero justo gravida nibh, non ultricies justo purus ultrices est.
     </p>
-    <form>
-  <div class="contact">
+    
 
     <h2>Contact</h2>
 
-  </div>
-        <label>
-    Email:
-    <input type="text" name="email" />
-  </label>
-  <label>
-    Commission Type:
-    <input type="text" name="type" />
-  </label>
-  <label>
-    Description:
-    <input type="text" name="details" />
-  </label>
-  <button class="btn">Submit</button>
-</form>
+    <form id="myForm">
+      <Input
+        label="Email"
+        name="email"
+        type="email"
+        placeholder="Email"
+        required
+      />
+      <Select
+        label="Commission Type"
+        options={[
+          { value: 'Head', label: 'Head' },
+          { value: 'Half Body', label: 'Half Body' },
+          { value: 'Full Body', label: 'Full Body' },
+        ]}
+        name="commission type"
+        placeholder="Commission Type"
+      />
+      <Input
+        label="Message"
+        name="message"
+        type="text"
+        placeholder="Message"
+        required
+      />
+      <button class="btn" type="submit">Send</button>
+    </form>
+    
+    <script>
+      document.getElementById('myForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+    
+        const formData = new FormData(this);
+    
+        fetch('https://script.google.com/macros/s/AKfycbxCYiVxg1hmx3z89nGjE0supdU7cF5h5Lqn-CfCNs5Gl6wAfsuEQc9RKEnr8D-VWOnG/exec', {
+          method: 'POST',
+          body: formData,
+        })
+          .then(response => response.json())
+          .then(data => {
+            console.log('Success:', data);
+            alert('Your message has been sent successfully!'); // Popup on success
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+            alert('There was an error sending your message. Please try again.'); // Popup on error
+          });
+      });
+    </script>
+    
+    
+
 
 </Layout>
 
@@ -48,6 +87,7 @@ form {
   gap: 1rem;
   
 }
+
 
 label {
   font-size: 1.35rem;
@@ -73,3 +113,5 @@ label {
 }
 
 </style>
+
+
