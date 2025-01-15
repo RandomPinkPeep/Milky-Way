@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 const allProjects = await getCollection("projects");
 const pageTitle = "Works";
+const allPhotos = await getCollection("photos");
 ---
 <Layout pageTitle={pageTitle}>
     <div class="gif">
@@ -19,8 +20,13 @@ const pageTitle = "Works";
         />)}
     </ul>
     <h2>Photography</h2>
-    <ul role="list" class="link-card-grid"></ul>
-    
+    <!-- <ul role="list" class="link-card-grid">
+        {allPhotos.map((card) => <Card 
+            url={`/photos/${card.slug}/`} 
+            image={card.data.image.url} 
+            title={card.data.title} 
+            body={card.data.description}
+        />)} -->
 
 </Layout>
 
