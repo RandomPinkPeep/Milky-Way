@@ -10,7 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@clerk/astro": "^2.1.7",
     "astro": "^4.1.3",
-    "free-astro-components": "^1.1.1"
+    "free-astro-components": "^1.1.1",
+    "googleapis": "^144.0.0"
   }
 }
